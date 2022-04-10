@@ -1,3 +1,103 @@
-body{
-    background-color: red;
+@use "sass:math";
+
+$grid_height:30;
+
+$grid_column_base:math.div(100,16);
+$grid_column_base__double: 2*$grid_column_base;
+.graella{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin:0;
+    font-size: 12px;
+    &__column{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        &--hours{
+            width: #{$grid_column_base+'%'};
+            box-sizing: border-box;
+        }
+        &--day{
+            width: #{$grid_column_base__double + '%'};
+            box-sizing: border-box;
+        }
+    }
+    &__block{
+        border: 1px solid black;
+        box-sizing: border-box;
+        height:#{$grid_height}px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        &--heading{
+            background-color: #3b3b3b;
+        }
+        &--hour{
+            justify-content: flex-start;
+            border:none;
+            background-color: #3b3b3b;
+            color:#ddd;
+            &:nth-child(2n){
+                border-top: 1px solid black;
+            }
+        }
+        &--block{
+            color: white;
+            a,a:hover,a:visited,a:active{
+                color: white;
+            }
+        }
+        &--musica{
+            background-color: #3b3b3b;
+            color: #6e6e6e;
+            font-weight: normal;
+        }
+        &--contrabanda{
+            background-color: blue;
+        }
+        &--directe{
+            background-color: red;
+        }
+        &--podcast{
+            background-color: green;
+        }
+        @for $i from 1 through 48 {
+            &--duration-#{$i}{
+                height: #{$i*$grid_height}px;
+            }
+        }
+    }
+    &_block-time{
+        display: none;
+    }
+}
+
+.program{
+    &__metas{
+        background-color: #ddd;
+        padding: 16px;
+        border-radius: 16px;
+        margin-bottom:32px;
+        a,a:hover,a:active,a:visited{
+            color: inherit;
+        }
+        p:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__schedule{
+        p,ul{
+            margin-bottom: 0;
+        }
+        li{
+            list-style: none;
+        }
+    }
+    &__links{
+        a:hover{
+            text-decoration: none;
+        }
+    }
 }
