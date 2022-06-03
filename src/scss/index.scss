@@ -1,26 +1,37 @@
 @use "sass:math";
-
+@import '~rupture-sass/rupture';
+@import './rupture.scss';
 $grid_height:30;
 
 $grid_column_base:math.div(100,16);
 $grid_column_base__double: 2*$grid_column_base;
 .graella{
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     margin:0;
     font-size: 12px;
     &__column{
-        display: flex;
+        display:none;
         flex-wrap: wrap;
         flex-direction: column;
+        @include above('l'){
+            display: flex;
+        }
         &--hours{
             width: #{$grid_column_base+'%'};
             box-sizing: border-box;
+            // &:first-child{
+            //     display: flex;
+            // }
         }
         &--day{
-            width: #{$grid_column_base__double + '%'};
             box-sizing: border-box;
+            width: 100%;
+            @include above('l'){
+                width: #{$grid_column_base__double + '%'};
+            }
         }
     }
     &__block{
@@ -29,9 +40,14 @@ $grid_column_base__double: 2*$grid_column_base;
         height:#{$grid_height}px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
+        padding: 8px;
+        @include above('l'){
+            padding: 0;
+            justify-content: center;
+            text-align: center;
+        }
         &--heading{
+            text-transform: uppercase;
             background-color: #3b3b3b;
         }
         &--hour{
@@ -45,8 +61,12 @@ $grid_column_base__double: 2*$grid_column_base;
         }
         &--block{
             color: white;
+            font-weight: bold;
+            @include above('l'){
+                font-weight: normal;
+            }
             a,a:hover,a:visited,a:active{
-                color: white;
+                color: white !important;
             }
         }
         &--musica{
@@ -65,12 +85,60 @@ $grid_column_base__double: 2*$grid_column_base;
         }
         @for $i from 1 through 48 {
             &--duration-#{$i}{
-                height: #{$i*$grid_height}px;
+                height: auto;
+                @include above('l'){
+                    height: #{$i*$grid_height}px;
+                }
             }
         }
     }
-    &_block-time{
-        display: none;
+    &__block-time{
+        color: #fff;
+        @include above('l'){
+            display: none;
+        }
+    }
+    &__labels{
+        margin-top: 32px;
+        display: flex;
+        padding-left: 0;
+        justify-content: center;
+        @include above('l'){
+            display: none;
+        }
+        &.large{
+            display:none;
+            @include above('l'){
+                display: flex;
+            }
+        }
+        li{
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+            list-style: none;
+            padding: 0.5rem 1rem;
+        }
+    }
+    $setmana: (
+        'dilluns',
+        'dimarts',
+        'dimecres',
+        'dijous',
+        'divendres',
+        'dissabte',
+        'diumenge'
+    );
+    @each $day_graella in $setmana{
+        &.#{$day_graella}{
+            @each $day_column in $setmana{
+                @if $day_graella == $day_column{
+                    .graella__column--#{$day_column}{
+                        display:flex;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -98,6 +166,27 @@ $grid_column_base__double: 2*$grid_column_base;
     &__links{
         a:hover{
             text-decoration: none;
+        }
+    }
+    &__podcast{
+        strong{
+            a{
+                font-weight: 500;
+            }
+        }
+    }
+}
+.navigation{
+    &.nav{
+        @include above('l'){
+            display: none;
+        }
+    }
+    &__item{
+        &--button{
+            &.nav-link{
+                padding: .5rem;
+            }
         }
     }
 }

@@ -1,0 +1,121 @@
+# Copyright (C) 2022 Bacterio
+# This file is distributed under the same license as the Contrabanda plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Contrabanda 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/contrabanda_plugin\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-03T17:09:39+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: contrabanda\n"
+
+#. Plugin Name of the plugin
+msgid "Contrabanda"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/contrabanda-fm/contrabanda_plugin"
+msgstr ""
+
+#. Description of the plugin
+msgid "A wp plugin to handle the radio schedule and programs."
+msgstr ""
+
+#. Author of the plugin
+msgid "Bacterio"
+msgstr ""
+
+#: lib/graella_display.php:49
+#: lib/graella_display.php:161
+#: lib/now_playing.php:27
+msgid "Música"
+msgstr ""
+
+#: lib/graella_display.php:50
+msgid "musica"
+msgstr ""
+
+#: lib/graella_display.php:162
+msgid "Directes"
+msgstr ""
+
+#: lib/graella_display.php:163
+msgid "Reemisions"
+msgstr ""
+
+#: lib/graella_display.php:164
+msgid "Podcasts"
+msgstr ""
+
+#: lib/graella_display.php:165
+msgid "Quinzenal"
+msgstr ""
+
+#: lib/helpers.php:15
+msgid "dl"
+msgstr ""
+
+#: lib/helpers.php:16
+msgid "dm"
+msgstr ""
+
+#: lib/helpers.php:17
+msgid "dx"
+msgstr ""
+
+#: lib/helpers.php:18
+msgid "dj"
+msgstr ""
+
+#: lib/helpers.php:19
+msgid "dv"
+msgstr ""
+
+#: lib/helpers.php:20
+msgid "ds"
+msgstr ""
+
+#: lib/helpers.php:21
+msgid "dg"
+msgstr ""
+
+#: lib/helpers.php:27
+msgid "dilluns"
+msgstr ""
+
+#: lib/helpers.php:28
+msgid "dimarts"
+msgstr ""
+
+#: lib/helpers.php:29
+msgid "dimecres"
+msgstr ""
+
+#: lib/helpers.php:30
+msgid "dijous"
+msgstr ""
+
+#: lib/helpers.php:31
+msgid "divendres"
+msgstr ""
+
+#: lib/helpers.php:32
+msgid "dissabte"
+msgstr ""
+
+#: lib/helpers.php:33
+msgid "diumenge"
+msgstr ""
+
+#: lib/programes_filters.php:15
+msgid "Directe"
+msgstr ""
+
+#: lib/programes_filters.php:23
+msgid "Repeticions"
+msgstr ""

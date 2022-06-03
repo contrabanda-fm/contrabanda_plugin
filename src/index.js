@@ -1,2 +1,4 @@
 import './scss/index.scss';
-(() => { console.log('Ha! Ivan!')})()
+import { GraellaNav } from './modules/graellaNav';
+
+const graellaNav =new GraellaNav();

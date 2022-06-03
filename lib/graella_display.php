@@ -18,7 +18,7 @@
         $hours_column = generate_hour_column();
         $program_columns = generate_program_column();
 
-        $graella .= $graella_wrapper.$hours_column.$program_columns.$hours_column.$graella_wrapper_close;
+        $graella .= build_graella_labels('').build_week_navigation().$graella_wrapper.$hours_column.$program_columns.$hours_column.$graella_wrapper_close.build_graella_labels('large');
 
         return $graella;
     }
@@ -42,12 +42,12 @@
         foreach(setmana() as $day){
             $day_schedule = get_field($day, 'options');
             $day_blocks = build_daily_schedule_array($day_schedule);
-            $programes .= '<div class="graella__column graella__column--day">';
-            $programes .= "<div class='graella__block graella__block--block graella__block--heading graella__block--duration-1'>${day}</div>";
+            $programes .= "<div class='graella__column graella__column--day graella__column--${day}'>";
+            $programes .= "<div class='graella__block graella__block--block graella__block--heading graella__block--duration-1'>".setmana_i18n($day)."</div>";
             foreach($day_blocks as $block){
                 if($block['program']==0){
-                    $block_name = 'Música';
-                    $block_type = 'musica';
+                    $block_name = __('Música','contrabanda');
+                    $block_type = __('musica','contrabanda');
                 }else{
                     $block_name = get_the_title($block['program']);
                     $block_types = get_the_terms($block['program'],'tipus');
@@ -62,7 +62,7 @@
                     $program_classes .= " graella__block--directe";
                 }
                 $programes .= "<div class='${program_classes}'>";
-                $programes .= "<div class='graella_block-time'>${block_start}</div>";
+                $programes .= "<div class='graella__block-time'>${block_start}</div>";
                 if($block['program']==0){
                     $programes .= "<div class='graella__block__name'>${block_name}${block_quinzenal}</div>";
                 }else{
@@ -141,4 +141,31 @@
             $schedule[$last_block]['finish'] = 48;
             return $schedule;
     }
+    function build_week_navigation(){
+        $navigation = "<ul class='nav nav-tabs flex-row graella__navigation navigation' id='myTab' role='tablist'>";
+        foreach(setmana() as $key=>$day){
+            date('N')-1 == $key ? $active='active' : $active = null;
+            date('N')-1 == $key ? $selected='true' : $selected = false;
+            $setmana_short = setmana_short($day);
+            $navigation .="<li class='flex-start navigation__item nav-item ${active}'>
+            <button class='nav-link navigation__item--button ${active}' id='${day}-tab' day-target='${day}' type='button' role='tab' aria-controls='${day}' aria-selected='${selected}'>${setmana_short}</button>
+          </li>";
+        }
+        $navigation .= "</ul>";
+
+        return $navigation;
+    }
+
+    function build_graella_labels($class){
+        $labels = "<ul class='graella__labels ${class}'>";
+        $labels .= "<li class='graella__block--block graella__block--musica'>".__('Música','contrabanda')."</li>";
+        $labels .= "<li class='graella__block--block graella__block--directe'>".__('Directes','contrabanda')."</li>";
+        $labels .= "<li class='graella__block--block graella__block--contrabanda'>".__('Reemisions','contrabanda')."</li>";
+        $labels .= "<li class='graella__block--block graella__block--podcast'>".__('Podcasts','contrabanda')."</li>";
+        $labels .= "<li class='graella__block--block graella__block--contrabanda'>*".__('Quinzenal','contrabanda')."</li>";
+        $labels .= "</ul>";
+
+        return $labels; 
+        
+    } 
 ?>

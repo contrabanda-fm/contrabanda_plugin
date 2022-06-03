@@ -12,7 +12,7 @@ function program_jumbo($post_id){
     $program_schedule = get_program_schedule($post_id);
     $runtimes = "<div class='program__schedule'>";
     if(!empty($program_schedule['live'])){
-        $runtimes .= "<p><small><strong>Directe</strong></small></p>";
+        $runtimes .= "<p><small><strong>".__('Directe','contrabanda')."</strong></small></p>";
         $runtimes .= "<ul class='program__schedule--live'>";
         foreach($program_schedule['live'] as $schedule){
             $runtimes .= "<li><small>${schedule}</small></li>";
@@ -20,7 +20,7 @@ function program_jumbo($post_id){
         $runtimes .= "</ul>";
     }
     if(!empty($program_schedule['rerun'])){
-        $runtimes .= "<p><small><strong>Repeticions</strong></small></p>";
+        $runtimes .= "<p><small><strong>".__('Repeticions','contrabanda')."</strong></small></p>";
         $runtimes .= "<ul class='program__schedule--rerun'>";
         foreach($program_schedule['rerun'] as $schedule){
             $runtimes .= "<li><small>${schedule}</small></li>";
@@ -38,7 +38,7 @@ function program_jumbo($post_id){
     
     $jumbo = "<div class='program__metas'>";
     $jumbo .= $runtimes;
-    $jumbo .= "<p class='program__podcast'><small><strong><a href='${podcast}' title='podcast'>${nice_podcast}</a></strong></small></p>";
+    $jumbo .= "<p class='program__podcast'><strong><a href='${podcast}' title='podcast'>${nice_podcast}</a></strong></p>";
     $jumbo .= "<p class='program__links'>";
     $jumbo .= "<a href='${feed}' title='rss feed'><span class='dashicons dashicons-rss'></span></a>";
     if(!empty($facebook)) { 

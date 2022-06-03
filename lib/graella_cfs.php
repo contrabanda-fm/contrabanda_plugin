@@ -176,6 +176,60 @@ if( function_exists('acf_add_local_field_group') ):
                 'return_format' => 'object',
                 'ui' => 1,
             ),
+            array(
+                'key' => 'field_259635b59834f',
+                'label' => 'Instruccions per sentir online',
+                'name' => 'sentir_online',
+                'type' => 'post_object',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'post_type' => array(
+                    0 => 'page',
+                ),
+                'taxonomy' => '',
+                'allow_null' => 0,
+                'multiple' => 0,
+                'return_format' => 'object',
+                'ui' => 1,
+            ),
+            array(
+                'key' => 'field_629a4a1be7683',
+                'label' => 'Url de l\'streaming',
+                'name' => 'streaming_url',
+                'type' => 'url',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+            ),
+            array(
+                'key' => 'field_629a4a29e7684',
+                'label' => 'Url de l\'streaming en playlist',
+                'name' => 'streaming_url_playlist',
+                'type' => 'url',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+            ),
         ),
         'location' => array(
             array(
@@ -196,6 +250,7 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
         'show_in_rest' => 0,
     ));
+    
     
 endif;		
 ?>
