@@ -35,7 +35,7 @@ function get_player(){
     </audio>";
     
     
-    echo "<div class='nowplaying' id='nowplaying'><div>".date('H:i')."': '${now_playing_link}</div>";
+    echo "<div class='nowplaying' id='nowplaying'><div>".date('H:i').": ${now_playing_link}</div>";
     $listen_help = get_field('sentir_online','options');
     $listen_help_title = get_the_title($listen_help);
     $listen_help_link = get_permalink($listen_help);
