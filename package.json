@@ -1,6 +1,6 @@
 {
   "name": "contrabanda_plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A wp plugin to handle the radio schedule and programs",
   "main": "index.js",
   "type": "module",
