@@ -1,0 +1,123 @@
+# Copyright (C) 2022 Bacterio
+# This file is distributed under the same license as the Contrabanda plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Contrabanda 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/"
+"contrabanda_plugin\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-03T17:09:39+00:00\n"
+"PO-Revision-Date: 2022-06-03 19:13+0200\n"
+"X-Generator: Poedit 2.3\n"
+"X-Domain: contrabanda\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es_ES\n"
+
+#. Plugin Name of the plugin
+msgid "Contrabanda"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/contrabanda-fm/contrabanda_plugin"
+msgstr ""
+
+#. Description of the plugin
+msgid "A wp plugin to handle the radio schedule and programs."
+msgstr ""
+
+#. Author of the plugin
+msgid "Bacterio"
+msgstr ""
+
+#: lib/graella_display.php:49 lib/graella_display.php:161
+#: lib/now_playing.php:27
+msgid "Música"
+msgstr "Música"
+
+#: lib/graella_display.php:50
+msgid "musica"
+msgstr "musica"
+
+#: lib/graella_display.php:162
+msgid "Directes"
+msgstr "Directos"
+
+#: lib/graella_display.php:163
+msgid "Reemisions"
+msgstr "Reemisiones"
+
+#: lib/graella_display.php:164
+msgid "Podcasts"
+msgstr "Podcasts"
+
+#: lib/graella_display.php:165
+msgid "Quinzenal"
+msgstr "Quincenal"
+
+#: lib/helpers.php:15
+msgid "dl"
+msgstr "lu"
+
+#: lib/helpers.php:16
+msgid "dm"
+msgstr "ma"
+
+#: lib/helpers.php:17
+msgid "dx"
+msgstr "mx"
+
+#: lib/helpers.php:18
+msgid "dj"
+msgstr "ju"
+
+#: lib/helpers.php:19
+msgid "dv"
+msgstr "vi"
+
+#: lib/helpers.php:20
+msgid "ds"
+msgstr "sa"
+
+#: lib/helpers.php:21
+msgid "dg"
+msgstr "do"
+
+#: lib/helpers.php:27
+msgid "dilluns"
+msgstr "lunes"
+
+#: lib/helpers.php:28
+msgid "dimarts"
+msgstr "martes"
+
+#: lib/helpers.php:29
+msgid "dimecres"
+msgstr "miércoles"
+
+#: lib/helpers.php:30
+msgid "dijous"
+msgstr "jueves"
+
+#: lib/helpers.php:31
+msgid "divendres"
+msgstr "viernes"
+
+#: lib/helpers.php:32
+msgid "dissabte"
+msgstr "sábado"
+
+#: lib/helpers.php:33
+msgid "diumenge"
+msgstr "domingo"
+
+#: lib/programes_filters.php:15
+msgid "Directe"
+msgstr "Directo"
+
+#: lib/programes_filters.php:23
+msgid "Repeticions"
+msgstr "Repeticiones"
