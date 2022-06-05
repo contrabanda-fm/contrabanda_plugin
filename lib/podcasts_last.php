@@ -23,6 +23,12 @@ function get_contrabanda_podcasts(){
                 'terms'            => 'contrabanda',
                 'field'            => 'slug',
             ),
+            array(
+                'taxonomy'         => 'tipus',
+                'terms'            => 'propia',
+                'field'            => 'slug',
+                'operator'         => 'NOT IN',
+            ),
         )
     );
 
@@ -33,6 +39,7 @@ function get_contrabanda_podcasts(){
         $thumbnail = get_the_post_thumbnail_url();
         $program = get_the_title();
         $podcast = preg_replace("(^https?://)", "", get_field('podcast') );
+        var_dump($podcast);
         $site_args = array(
             'domain' => $podcast
         );
@@ -40,7 +47,7 @@ function get_contrabanda_podcasts(){
         $podcast_id=$site[0]->blog_id;
         $site_details = get_blog_details($podcast_id);
         $last_podcast = get_last_podcast($podcast_id);
-        if($last_podcast&&$site[0]->blog_id!=1){
+        if($last_podcast){
             $last_podcast['thumbnail'] = $thumbnail;
             $last_podcast['program'] = $program;
             $last_podcasts[$last_podcast['date']] = $last_podcast;
