@@ -39,7 +39,6 @@ function get_contrabanda_podcasts(){
         $thumbnail = get_the_post_thumbnail_url();
         $program = get_the_title();
         $podcast = preg_replace("(^https?://)", "", get_field('podcast') );
-        var_dump($podcast);
         $site_args = array(
             'domain' => $podcast
         );
