@@ -45,6 +45,7 @@ function get_contrabanda_podcasts(){
             $last_podcasts[$last_podcast['date']] = $last_podcast;
         }
     endwhile;
+    krsort($last_podcasts);
     return $last_podcasts;
 }
 function get_last_podcast($podcast_id){
