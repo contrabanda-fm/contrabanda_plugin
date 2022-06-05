@@ -5,17 +5,17 @@ msgstr ""
 "Project-Id-Version: Contrabanda 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/"
 "contrabanda_plugin\n"
+"POT-Creation-Date: 2022-06-05T17:53:43+00:00\n"
+"PO-Revision-Date: 2022-06-05 19:54+0200\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-06-03T17:09:39+00:00\n"
-"PO-Revision-Date: 2022-06-03 19:13+0200\n"
 "X-Generator: Poedit 2.3\n"
 "X-Domain: contrabanda\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: es_ES\n"
 
 #. Plugin Name of the plugin
 msgid "Contrabanda"
@@ -33,28 +33,28 @@ msgstr ""
 msgid "Bacterio"
 msgstr ""
 
-#: lib/graella_display.php:49 lib/graella_display.php:161
-#: lib/now_playing.php:27
+#: lib/graella_display.php:52 lib/graella_display.php:164
+#: lib/now_playing.php:26
 msgid "Música"
 msgstr "Música"
 
-#: lib/graella_display.php:50
+#: lib/graella_display.php:53
 msgid "musica"
 msgstr "musica"
 
-#: lib/graella_display.php:162
+#: lib/graella_display.php:165
 msgid "Directes"
 msgstr "Directos"
 
-#: lib/graella_display.php:163
+#: lib/graella_display.php:166
 msgid "Reemisions"
 msgstr "Reemisiones"
 
-#: lib/graella_display.php:164
+#: lib/graella_display.php:167
 msgid "Podcasts"
 msgstr "Podcasts"
 
-#: lib/graella_display.php:165
+#: lib/graella_display.php:168
 msgid "Quinzenal"
 msgstr "Quincenal"
 
@@ -113,6 +113,10 @@ msgstr "sábado"
 #: lib/helpers.php:33
 msgid "diumenge"
 msgstr "domingo"
+
+#: lib/podcasts_last.php:8
+msgid "Darrers programes"
+msgstr "Últimos programas"
 
 #: lib/programes_filters.php:15
 msgid "Directe"
