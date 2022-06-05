@@ -30,6 +30,6 @@ require_once('lib/graella_cfs.php');
 require_once('lib/graella_display.php');
 //Display now playing
 require_once('lib/now_playing.php');
-
-
+//Get last posdcasts
+require_once('lib/podcasts_last.php');
  ?>
