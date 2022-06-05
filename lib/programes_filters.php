@@ -35,8 +35,10 @@ function program_jumbo($post_id){
     $mail = get_field('mail', $post_id);
     $facebook = get_field('facebook', $post_id);
     $twitter = get_field('twitter', $post_id);
+    $thumbnail = get_the_post_thumbnail_url(null,'medium');
     
     $jumbo = "<div class='program__metas'>";
+    $jumbo .= "<img src='${thumbnail}'/>";
     $jumbo .= $runtimes;
     $jumbo .= "<p class='program__podcast'><strong><a href='${podcast}' title='podcast'>${nice_podcast}</a></strong></p>";
     $jumbo .= "<p class='program__links'>";
