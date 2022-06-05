@@ -28,7 +28,7 @@
             'tipus', 
             array(
                 'description' => 'Un programa de contrabanda amb podcast fora de contrabanda.org',
-                'slug'        => 'contrabanda',
+                'slug'        => 'propia',
             )
         );
         wp_insert_term( 

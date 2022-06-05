@@ -3,6 +3,9 @@
     add_filter( 'the_content', 'add_graella');
     function add_graella($content){
         $graella_page = get_field('pagina_de_programacio','options');
+        if(!$graella_page){
+            return $content;
+        }
         if(is_page($graella_page->ID)){
             $content .= display_graella();
         }
