@@ -148,12 +148,20 @@ $grid_column_base__double: 2*$grid_column_base;
         padding: 16px;
         border-radius: 16px;
         margin-bottom:32px;
+        display: flex;
+        flex-direction: column;
+        @include above(xl){
+            flex-direction: row;
+        }
         a,a:hover,a:active,a:visited{
             color: inherit;
         }
         p:last-child{
             margin-bottom: 0;
         }
+    }
+    &__thumb{
+        margin-right: 32px;
     }
     &__schedule{
         p,ul{

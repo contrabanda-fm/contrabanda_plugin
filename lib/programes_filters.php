@@ -38,7 +38,9 @@ function program_jumbo($post_id){
     $thumbnail = get_the_post_thumbnail_url(null,'medium');
     
     $jumbo = "<div class='program__metas'>";
+    $jumbo .= "<div class='program__thumb'>";
     $jumbo .= "<img src='${thumbnail}'/>";
+    $jumbo .= "</div><div class=''>";
     $jumbo .= $runtimes;
     $jumbo .= "<p class='program__podcast'><strong><a href='${podcast}' title='podcast'>${nice_podcast}</a></strong></p>";
     $jumbo .= "<p class='program__links'>";
@@ -50,6 +52,7 @@ function program_jumbo($post_id){
         $jumbo .= "<a href='${facebook}' title='twitter'><span class='dashicons dashicons-twitter'></span></a>";
     }
     $jumbo .= "</p>";
+    $jumbo .= "</div>";
     $jumbo .= "</div>";
     return $jumbo;
 }
