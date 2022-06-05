@@ -16,6 +16,7 @@ function get_contrabanda_podcasts(){
     $args = array(
         'post_type'              => array( 'programa' ),
         'post_status'            => array( 'published' ),
+        'posts_per_page'         => -1,
         'tax_query'              => array(
             array(
                 'taxonomy'         => 'tipus',
