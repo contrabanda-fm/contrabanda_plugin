@@ -7,15 +7,18 @@ class ContrabandaPlayer{
         // this.contrabandaAudio.src = this.stream_src;
         // this.contrabandaAudio.load();
         this.contrabandaAudio = new Audio(this.stream_src);
-
         this.init();
     }
     init = () => {
         this.playpause_btn.addEventListener('click', () => this.playpauseStream());
     }
     playpauseStream = () => {
-        if(!this.isPlaying) this.playStream();
-        else this.stopStream();
+        if(jscd.mobile){
+            window.location.href = this.stream_src;
+        }else{
+            if(!this.isPlaying) this.playStream();
+            else this.stopStream();
+        }
     }
     playStream = () => {
         this.contrabandaAudio.play();
