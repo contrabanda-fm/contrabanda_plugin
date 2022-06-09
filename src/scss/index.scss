@@ -207,6 +207,9 @@ $grid_column_base__double: 2*$grid_column_base;
     &__now-playing{
         font-weight: 700;
         color: #fff;
+        a{
+            color: #fff;
+        }
     }
     &__help{
         font-family: 'dashicons';

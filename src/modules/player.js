@@ -3,9 +3,10 @@ class ContrabandaPlayer{
         this.playpause_btn = document.getElementById('contrabanda_playpause');
         this.stream_src = this.playpause_btn.getAttribute('data-url');
         this.isPlaying = false;
-        this.contrabandaAudio = document.createElement('audio');
-        this.contrabandaAudio.src = this.stream_src;
-        this.contrabandaAudio.load();
+        // this.contrabandaAudio = document.createElement('audio');
+        // this.contrabandaAudio.src = this.stream_src;
+        // this.contrabandaAudio.load();
+        this.contrabandaAudio = new Audio(this.stream_src);
 
         this.init();
     }
