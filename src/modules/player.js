@@ -19,7 +19,6 @@ class ContrabandaPlayer{
     }
     playStream = () => {
         this.contrabandaAudio.play();
-        alert('Audio will play.')
         this.isPlaying = true;
         this.toggleClasses();
     }
