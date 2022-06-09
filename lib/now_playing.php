@@ -27,18 +27,24 @@ function get_player(){
 
     }
 
-    $streaming_url = get_field('streaming_url','options');
-    $streaming_url_playlist = get_field('streaming_url_playlist','options');
-    echo "<audio controls>
-        <source src='${streaming_url}' type='audio/ogg'>
-        <source src='${streaming_url_playlist}'>
-    </audio>";
     
+    echo player();
     
-    echo "<div class='nowplaying' id='nowplaying'><div>".date('H:i').": ${now_playing_link}</div>";
+    echo "<div class='contrabanda-player__now-playing' id='nowplaying'>".date('H:i').": ${now_playing_link}</div>";
     $listen_help = get_field('sentir_online','options');
     $listen_help_title = get_the_title($listen_help);
     $listen_help_link = get_permalink($listen_help);
-    echo "<div>${listen_help_title}<a href='${listen_help_link}'>(?)</a></div></div>";
+    echo "<a class='contrabanda-player__help' title='${listen_help_title}' href='${listen_help_link}'></a>";
         
+}
+
+function player(){
+    $streaming_url = get_field('streaming_url','options');
+    $streaming_url_playlist = get_field('streaming_url_playlist','options');
+    // $player = "<audio controls>
+    //     <source src='${streaming_url}' type='audio/ogg'>
+    //     <source src='${streaming_url_playlist}'>
+    // </audio>";
+    $player = "<button id='contrabanda_playpause' class='contrabanda-player__button contrabanda-player__button--play' aria-label='Play' data-url='${streaming_url}'></button>";
+    return $player;
 }
