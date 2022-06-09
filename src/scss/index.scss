@@ -198,48 +198,51 @@ $grid_column_base__double: 2*$grid_column_base;
         }
     }
 }
-.contrabanda-player{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    padding: 24px 10px;
-    border-radius: 8px;
-    &__now-playing{
-        font-weight: 700;
-        color: #fff;
-        a{
+.contrabanda-theme{
+    .contrabanda-player{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 24px 10px;
+        border-radius: 8px;
+        &__now-playing{
+            font-weight: 700;
             color: #fff;
-        }
-    }
-    &__help{
-        font-family: 'dashicons';
-        font-size: 24px;
-        line-height: 24px;
-        margin:0 8px;
-        &:hover{
-            text-decoration: none;
-        }
-        &:before{
-            color: #fff;
-            content: "\f223";
-        }
-    }
-    &__button{
-        background-color: rgba(0,0,0,0);
-        border: none;
-        font-family: 'dashicons';
-        font-size: 48px;
-        line-height: 24px;
-        color: #fff;
-        margin:0 8px;
-        &--play{
-            &:before{
-                content: "\f522";
+            a, a:hover{
+                color: #fff !important;
+                font-weight: 700;
             }
         }
-        &--pause{
+        &__help{
+            font-family: 'dashicons';
+            font-size: 24px;
+            line-height: 24px;
+            margin:0 8px;
+            &:hover{
+                text-decoration: none;
+            }
             &:before{
-                content: "\f523";
+                color: #fff;
+                content: "\f223";
+            }
+        }
+        &__button{
+            background-color: rgba(0,0,0,0);
+            border: none;
+            font-family: 'dashicons';
+            font-size: 48px;
+            line-height: 24px;
+            color: #fff;
+            margin:0 8px;
+            &--play{
+                &:before{
+                    content: "\f522";
+                }
+            }
+            &--pause{
+                &:before{
+                    content: "\f523";
+                }
             }
         }
     }
