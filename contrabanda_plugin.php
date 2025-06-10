@@ -3,7 +3,7 @@
  * Plugin Name:       Contrabanda
  * Plugin URI:        https://github.com/contrabanda-fm/contrabanda_plugin
  * Description:       A wp plugin to handle the radio schedule and programs.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Bacterio
  * Text Domain:       contrabanda
  * Domain Path:       /languages
