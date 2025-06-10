@@ -44,7 +44,7 @@ function get_contrabanda_podcasts(){
         );
         $site = get_sites($site_args);
         $podcast_id=$site[0]->blog_id;
-        var_dump($podcast_id);
+        var_dump($site);
         $site_details = get_blog_details($podcast_id);
         $last_podcast = get_last_podcast($podcast_id);
         if($last_podcast){
