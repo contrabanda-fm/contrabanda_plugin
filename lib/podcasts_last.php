@@ -2,6 +2,7 @@
 function display_podcasts(){
     $podcast_loop = '';
     $last_podcasts = get_contrabanda_podcasts();
+    var_dump($last_podcasts);
     foreach($last_podcasts as $podcast){
         $podcast_loop .= build_podcast_card($podcast);
     }
@@ -56,7 +57,6 @@ function get_contrabanda_podcasts(){
     return $last_podcasts;
 }
 function get_last_podcast($podcast_id){
-    var_dump($podcast_id);
     switch_to_blog($podcast_id);
     $month_ago = strtotime("-1 month");
     $args = array(
@@ -73,7 +73,6 @@ function get_last_podcast($podcast_id){
             restore_current_blog();
             return null;
         }
-        var_dump(get_the_id());
         $last_podcast = array(
             'title' => get_the_title(),
             'link'  => get_permalink(),
