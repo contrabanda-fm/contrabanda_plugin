@@ -2,7 +2,6 @@
 function display_podcasts(){
     $podcast_loop = '';
     $last_podcasts = get_contrabanda_podcasts();
-    var_dump($last_podcasts);
     foreach($last_podcasts as $podcast){
         $podcast_loop .= build_podcast_card($podcast);
     }
@@ -45,6 +44,7 @@ function get_contrabanda_podcasts(){
         );
         $site = get_sites($site_args);
         $podcast_id=$site[0]->blog_id;
+        var_dump(podcast_id);
         $site_details = get_blog_details($podcast_id);
         $last_podcast = get_last_podcast($podcast_id);
         if($last_podcast){
