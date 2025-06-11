@@ -49,7 +49,7 @@ function get_contrabanda_podcasts(){
         $podcast_id=$site[0]->blog_id;
         $site_details = get_blog_details($podcast_id);
         $last_podcast = get_last_podcast($podcast_id);
-        if($last_podcast && $podcast_id){
+        if($last_podcast && is_int($podcast_id)){
             $last_podcast['thumbnail'] = $thumbnail;
             $last_podcast['program'] = $program;
             $last_podcasts[$last_podcast['date']] = $last_podcast;
@@ -59,7 +59,7 @@ function get_contrabanda_podcasts(){
     return $last_podcasts;
 }
 function get_last_podcast($podcast_id){
-    var_dump($podcast_id)
+    var_dump($podcast_id);
     switch_to_blog($podcast_id);
     $month_ago = strtotime("-1 month");
     $args = array(
