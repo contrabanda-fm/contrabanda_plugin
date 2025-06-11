@@ -44,8 +44,6 @@ function get_contrabanda_podcasts(){
             'domain' => $podcast
         );
         $site = get_sites($site_args);
-        var_dump("podcast");
-        var_dump($podcast);
         $podcast_id=$site[0]->blog_id;
         $site_details = get_blog_details($podcast_id);
         $last_podcast = get_last_podcast($podcast_id);
@@ -76,7 +74,6 @@ function get_last_podcast($podcast_id){
             restore_current_blog();
             return null;
         }
-        var_dump($podcast_id,get_the_date("Ymd"),date('Ymd',$month_ago),get_the_id());
         $last_podcast = array(
             'title' => get_the_title(),
             'link'  => get_permalink(),
