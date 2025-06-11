@@ -57,6 +57,8 @@ function get_contrabanda_podcasts(){
     return $last_podcasts;
 }
 function get_last_podcast($podcast_id){
+    var_dump("podcast_id");
+    var_dump($podcast_id);
     switch_to_blog($podcast_id);
     $month_ago = strtotime("-1 month");
     $args = array(
@@ -64,6 +66,8 @@ function get_last_podcast($podcast_id){
         'after'    => date('Y-m-d',$month_ago),
     );
     $last_post_query = new WP_Query( $args );
+    var_dump("last_post_query");
+    var_dump($last_post_query);
     while( $last_post_query->have_posts() ) : $last_post_query->the_post();
         if(get_the_date("Ymd")<date('Ymd',$month_ago)){
             restore_current_blog();
