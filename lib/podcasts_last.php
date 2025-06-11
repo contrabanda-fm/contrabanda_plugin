@@ -49,7 +49,7 @@ function get_contrabanda_podcasts(){
         $podcast_id=$site[0]->blog_id;
         $site_details = get_blog_details($podcast_id);
         $last_podcast = get_last_podcast($podcast_id);
-        if($last_podcast && $podcast_id){
+        if($last_podcast){
             $last_podcast['thumbnail'] = $thumbnail;
             $last_podcast['program'] = $program;
             $last_podcasts[$last_podcast['date']] = $last_podcast;
