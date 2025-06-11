@@ -43,6 +43,13 @@ function get_contrabanda_podcasts(){
             'domain' => $podcast
         );
         $site = get_sites($site_args);
+        $site_args_dump = array(
+            'domain' => $podcast,
+            'count'  => TRUE
+        );
+        $site_dump = get_sites($site_args_dump);
+        var_dump("site");
+        var_dump($site_dump);
         $podcast_id=$site[0]->blog_id;
         var_dump("podcast_id");
         var_dump($podcast_id);
