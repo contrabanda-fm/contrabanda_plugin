@@ -59,7 +59,6 @@ function get_contrabanda_podcasts(){
     return $last_podcasts;
 }
 function get_last_podcast($podcast_id){
-    var_dump($podcast_id);
     switch_to_blog($podcast_id);
     $month_ago = strtotime("-1 month");
     $args = array(
@@ -77,6 +76,7 @@ function get_last_podcast($podcast_id){
             restore_current_blog();
             return null;
         }
+        var_dump($podcast_id,get_the_date("Ymd"),date('Ymd',$month_ago),get_the_id());
         $last_podcast = array(
             'title' => get_the_title(),
             'link'  => get_permalink(),
